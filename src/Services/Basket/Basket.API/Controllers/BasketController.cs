@@ -19,7 +19,6 @@ namespace Basket.API.Controllers
 
         [HttpGet("{userName}", Name = "GetBasketByUsername")]
         [ProducesResponseType(typeof(ShoppingCart), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetBasket(string userName)
         {
             ShoppingCart basket = await _basketRepository.GetBasketAsync(userName);
