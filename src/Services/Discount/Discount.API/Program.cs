@@ -3,8 +3,6 @@ using Discount.API.Repositories;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddLogging();
-
 // Add services to the container.
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 
